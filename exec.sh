@@ -5,6 +5,6 @@ do
         --request POST \
         --data '{"type":"mutation","query":"INSERT INTO contacts(name, age) VALUES(\\\"test\\\", 25)"}' \
       http://localhost:3000/query &
-    sleep 0.01
+    sleep 0.001
 
 done

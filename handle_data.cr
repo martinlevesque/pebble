@@ -1,7 +1,7 @@
 # require "sqlite3"
 require "./app"
 
-def init_handle_data(db, channel, responses_channel)
+def init_mutate_data(db, channel, responses_channel)
   spawn do
     loop do
       received_query = channel.receive
