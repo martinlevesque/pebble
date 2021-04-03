@@ -2,6 +2,7 @@ FROM crystallang/crystal:latest-alpine
 
 WORKDIR /opt/app
 
+
 RUN apk add -u sqlite-static sqlite-dev
 
 # Bundle app source

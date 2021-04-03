@@ -1,0 +1,23 @@
+name: Tests - 
+
+on:
+  push:
+
+
+jobs:
+  test-:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - 
+        name: Create sqlite db
+        run: |
+          sqlite3 test/test.db 'create table contacts (age int)'
+      -
+        name: Build image
+        run: |
+          docker build -t p .
+      - 
+        name: Run
+        run: |
+          docker run --rm p sh test/test.sh

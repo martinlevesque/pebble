@@ -9,7 +9,9 @@ App.logger.info("Starting pebble")
 input_events_channel = Channel(String).new
 responses_channel = Channel(String).new
 
-db = DB.open "sqlite3://./data.db"
+database_path = ENV["DATABASE_PATH"] || "./data.db"
+
+db = DB.open "sqlite3://#{database_path}"
 
 init_mutate_data(db, input_events_channel, responses_channel)
 
