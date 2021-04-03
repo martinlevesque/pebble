@@ -17,3 +17,10 @@ Simple crystal-lang based dockerized web server allowing to store and read into 
             --request POST \
             --data '{"type":"mutation","query":"INSERT INTO contacts(age) VALUES(25)"}' \
           http://localhost:3000/query
+
+## Read the database
+
+        curl -H "Content-Type: application/json" \
+            --request POST \
+            --data '{"type":"read","query":"SELECT * FROM contacts"}' \
+          http://localhost:3000/query
