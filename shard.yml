@@ -1,0 +1,17 @@
+name: pebble
+version: 0.0.1
+
+dependencies:
+  #amqp-client:
+  #  github: cloudamqp/amqp-client.cr
+  #  version: 1.0.0
+
+  kemal:
+    github: kemalcr/kemal
+    #version: 1.0.0
+
+  sqlite3:
+    github: crystal-lang/crystal-sqlite3
+
+  logger:
+    github: crystal-lang/logger.cr
